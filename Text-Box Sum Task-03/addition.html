@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Two Numbers</title>
+    
+</head>
+<body onload="data()" style="text-align: center;">
+
+    <h1 style="color: green;">Sum of two numbers</h1>
+    <script>
+        var br = document.createElement("br");
+        function data() {
+
+            
+            var val1 = document.createElement("input");
+            val1.setAttribute("id", "txt1");
+            val1.setAttribute("type", "text");
+            val1.setAttribute("name", "txt1");
+            val1.setAttribute("placeholder", "Enter 1st Number");
+
+            
+            var val2 = document.createElement("input");
+            val2.setAttribute("id", "txt2");
+            val2.setAttribute("type", "text");
+            val2.setAttribute("name", "txt2");
+            val2.setAttribute("placeholder", "Enter 2nd Number");
+
+            
+            var ans = document.createElement("input");
+            ans.setAttribute("id", "result");
+            ans.setAttribute("type", "text");
+            ans.setAttribute("name", "result");
+            ans.setAttribute("placeholder", "Answer");
+
+            
+            var s = document.createElement("input");
+            s.setAttribute("id", "submit");
+            s.setAttribute("type", "submit");
+            s.setAttribute("value", "Add");
+            s.setAttribute("onclick", "sum();");
+
+            
+            document.body.appendChild(val1);
+            document.body.appendChild(br.cloneNode());
+
+            document.body.appendChild(val2);
+            document.body.appendChild(br.cloneNode());
+
+            document.body.appendChild(ans);
+            document.body.appendChild(br.cloneNode());
+
+            document.body.appendChild(s);
+
+
+        }
+
+
+        function sum()
+        {
+            var a = document.getElementById("txt1").value;
+            var b = document.getElementById("txt2").value;
+
+            var value1=parseInt(a);
+            var value2=parseInt(b);
+            var add=value1+value2;
+
+            var s=document.getElementById("result");
+            s.value=add;
+
+        }
+    </script>
+</body>
+</html>

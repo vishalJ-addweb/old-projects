@@ -1,0 +1,25 @@
+html
+    head
+        title Registration Form
+        style  
+            include ../public/css/style.css 
+        script 
+            include ../public/js/script.js
+    body 
+        div.container 
+        h1 Register Here 
+        form(action="/", method="post", class="myForm" name="myForm" onsubmit="success()")  
+            p=errmsg
+            p=submitmsg
+            //- input(type="text", class="myInput", name="noofinfo", id="noofinfo", placeholder="Enter the number for information to be entered")
+            //- input(type="number", class="myInput", name="id", id="id", placeholder="auto_incremented id")
+            input(type="text", class="myInput", name="fname", id="fname", placeholder="Name")
+            input(type="email", class="myInput", name="email", id="email", placeholder="Email")
+            input(type="phone", class="myInput", name="phone", id="phone", placeholder="Phone Number")
+            button(class="btn") 
+                | Submit
+            p=data
+            
+
+
+    //- INSERT INTO `user` (`sno`, `fname`, `email`, `phone`, `dt`) VALUES ('1', 'vishal', 'test@gmail.com', '9782681178', CURRENT_TIMESTAMP);

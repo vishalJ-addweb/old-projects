@@ -1,0 +1,91 @@
+Docker is an open platform for developing, shipping, and running applications
+With Docker, you can manage your infrastructure in the same ways you manage your applications
+By deploying your app and its dependencies in a container, your app becomes portable during all the phases of development and testing
+
+What is Docker :
+Docker is a software development platform for virtualization with multiple Operating systems running on the same host
+It helps to separate infrastructure and applications in order to deliver software quickly
+Unlike Hypervisors, which are used for creating VM (Virtual machines), virtualization in Docker is performed on system-level, also called Docker containers
+
+
+Why use Docker :
+Docker is computer software used for Virtualization in order to have multiple Operating systems running on the same host
+Docker images are the "source code" for our containers
+Dockerfile has two types of registries 
+public registries
+private registries
+Containers are the organizational units of Docker volume
+An image is a template, and a container is a copy of that template. We can have multiple containers of the same image
+What is Docker Container :
+It is a standard unit of software that stores code and all its dependencies so that application runs fast and reliably from one computing environment to different ones
+A container image is a lightweight, standalone, executable package of software that has everything you need to run an application
+Available for both Linux and Windows-based applications, containerized software will always run the same, regardless of the infrastructure
+Why use containers :
+Containers offer a logical packaging mechanism in which applications can be abstracted from the environment in which they actually run
+This decoupling allows container-based applications to be deployed easily and consistently, regardless of whether the target environment is a private data center, the public cloud, or even a developer’s personal laptop
+This gives developers the ability to create predictable environments that are isolated from the rest of the applications and can be run anywhere
+Docker Terminology :
+some terminology that is used frequently in the Docker ecosystem is mentioned below 
+Images :
+The blueprints of our application which form the basis of containers, we use the docker pull command to download the Ubuntu image
+Containers :
+Created from Docker images and run the actual application. We can create a container using docker run 
+A list of running containers can be seen using the docker ps command
+Docker Daemon :
+The background service running on the host that manages building, running and distributing Docker containers
+The daemon is the process that runs in the operating system which clients talk to
+Docker Client :
+The command line tool that allows the user to interact with the daemo
+More generally, there can be other forms of clients too - such as Kitematic which provide a GUI to the users
+Docker Hub :
+It is a registry of Docker images & it can be the registry as a directory of all available Docker images
+If required, one can host their own Docker registries and can use them for pulling images
+ 
+ 
+ 
+ 
+Docker Architecture :
+
+
+Docker commands :
+Docker version - Shows the docker version information
+dup - Composes will start & run your application
+down - Stop & remove containers
+dstop - Stop services
+dcbash - 
+docker run - Runs a command in a new container
+docker start - Starts one or more stopped containers
+docker stop - Stops one or more running containers
+docker build - Builds an image from a Docker file
+docker images - Shows the list of images 
+docker pull - Pulls an image or a repository from a registry
+docker push - Pushes an image or a repository to a registry
+docker exec - Runs a command in a run-time container
+docker logs - Fetches the logs of a container
+docker kill - kills one or more containers
+docker ps - Shows the list of containers
+docker restart -Restart one or more containers
+docker config - Manages Docker configuration
+docker create - Creates a new container
+docker diff - Inspect changes to files or directories on container’s filesystem
+docker history - Shows the history of an image
+docker info - Displays the system-wide information
+docker rename - Rename a container
+docker rm - Removes one or more containers
+docker rmi - Removes one or more images
+
+
+
+Questions:
+PHP Trainees
+Install docker in to your system
+Download image from docker repository
+Run that downloaded docker image
+Check the status of running docker image
+Login in to docker image
+Install nano in to that docker container
+
+
+
+
+

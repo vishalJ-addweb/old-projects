@@ -1,0 +1,16 @@
+GIT Practicals
+
+1. Check the git version in to local system 
+2. If git not installed, install git with following command:- 
+3. sudo apt install git
+4. Create folder in home directory, and create file in to that directory
+5. Go to the browser and login or create user in github:- https://github.com/
+6. Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
+7. Open Terminal in local system
+8. Change the current working directory to your local project.
+9. Initialize the local directory as a Git repository.
+10. Add the files in your new local repository. This stages them for the first commit.
+11. Commit the files that you've staged in your local repository.
+12. At the top of your GitHub repository's Quick Setup page, click  to copy the remote repository URL.
+13. In Terminal, add the URL for the remote repository where your local repository will be pushed.
+14. Push the changes in your local repository to GitHub

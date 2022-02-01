@@ -1,0 +1,27 @@
+html
+    head
+        title Registration Form
+        style  
+            include ../public/css/style.css 
+        script 
+            include ../public/js/script.js
+    body 
+        div.container 
+        h1 Register Here 
+        form(action="/", method="post", class="myForm" name="myForm" onsubmit="success()" enctype="multipart/form-data")  
+            p=errmsg
+            input(type="text", class="myInput", name="fname", id="fname", placeholder="Name")
+            input(type="phone", class="myInput", name="phone", id="phone", placeholder="Phone Number")
+            input(type="email", class="myInput", name="email", id="email", placeholder="Email")
+            input(type="date" class="myInput", name="dob", id="dob" max="2002-01-01")
+            input(type="password", class="myInput", name="pass", id="pass", placeholder="Password")
+            input(type="password", class="myInput", name="cpass", id="cpass", placeholder="Confirm Password" onblur="checkpass()")
+            p#errcpass
+            textarea(class="myInput", name="address", id="address", cols="30", rows="6", placeholder="Address Here") 
+            input(type="file", class="myInput", name="mFile", id="mFile")
+            button(class="btn") 
+                | Submit
+            
+
+
+    
