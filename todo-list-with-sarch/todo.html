@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <div>
+        <input type="text" name="search" id="search" placeholder="Search Here" onkeyup="searchMenu();">
+        <button>Submit</button>
+    </div>
+    <br><br>
+    <div>
+        <input type="text" class="input" id="input" placeholder="Write Item Name">
+        <button type="submit" id="addButton" class="addButton">Add Item</button>
+    </div>
+    <div class="container">
+        <br>
+        <div class="item">
+            <!-- <button class="editButton" id="editButton">Edit</button> -->
+            <!-- <button class="removeButton" id="removeButton">Remove</button> -->
+            <!-- <input type="text" class="item_input" disabled> -->
+        </div>
+    </div>
+    
+    <script>
+        const addButton = document.querySelector(".addButton");
+        const input = document.querySelector(".input");
+        const container = document.querySelector('.container');
+        const todoListItems = [];
+        
+        function searchMenu(){
+            
+            const search = document.getElementById('search').value;
+            const listItems = document.getElementsByTagName('li');
+            const classItems = document.getElementsByClassName("itemsBhai");
+            for(i=0;i<todoListItems.length;i++){
+
+                if(todoListItems[i].includes(search)){
+                    for(i=0;i<listItems.length;i++){
+                    if(listItems[i].innerText.includes(search)){
+                        classItems[i].style.display = 'block';
+                    }
+                    else{
+                        classItems[i].style.display = "none";
+                    }
+                }   
+                }
+            }
+        }
+
+        class item{
+            constructor(itemName){
+        
+                this.creatediv(itemName);
+            }
+            creatediv(itemName){
+                todoListItems.push(itemName);
+                let input = document.createElement('li');
+                input.innerHTML = itemName;
+                input.style.display = 'inline';
+                input.style.marginRight = '3px';
+                // input.disabled = true;
+                // input.type="text";
+                
+                let itemBox = document.createElement("div");
+                itemBox.setAttribute('class', 'itemsBhai');
+
+                let removeButton = document.createElement('button');
+                removeButton.innerHTML="REMOVE ITEM";
+
+                let editButton = document.createElement('button');
+                editButton.innerHTML="EDIT ITEM";
+
+                removeButton.addEventListener('click', ()=>this.remove(itemBox));
+                editButton.addEventListener('click', ()=>this.edit(input));
+
+                container.appendChild(itemBox);
+
+                itemBox.appendChild(input);
+                itemBox.appendChild(removeButton);
+                itemBox.appendChild(editButton);
+
+            }
+            remove(item){
+                    container.removeChild(item);
+                }
+
+            edit(item){
+                var iti = prompt("Write Edited Value Here", item.innerHTML);
+
+                if(iti=="" || iti=== null){
+                    alert("Please Provide Some Value To Edit");
+                }
+                else{
+                    item.innerHTML = iti;
+                }
+            }
+            
+        }
+
+    addButton.addEventListener('click', ()=>{
+    if(input.value != ""){
+        new item(input.value);
+        input.value="";
+    }
+})
+
+    </script>
+</body>
+</html>
