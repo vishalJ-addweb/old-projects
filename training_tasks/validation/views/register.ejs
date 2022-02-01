@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+
+        <% if(typeof alert != 'undefined') { %>
+            <% alert.forEach(function(error) { %>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <%= error.msg %>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+            <% }) %>
+        <% } %>
+
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="Name" id="Name">
+            </div>
+            <div class="form-group">
+                <label for="Mobile_no" class="form-label">Mobile No</label>
+                <input type="number"  class="form-control" name="Mobile_no" id="Mobile_no">
+            </div>
+            <div class="form-group">
+                <label for="Email" class="form-label">Email address</label>
+                <input type="Email" class="form-control" name="Email" id="Email">
+            </div>
+            <div class="form-group">
+                <label for="DOB" class="form-label">DOB</label>
+                <input type="date" min="2002-01-01" class="form-control" name="DOB" id="DOB">
+            </div>
+            <div class="form-group">
+                <label for="Password" class="form-label">Password</label>
+                <input type="Password" class="form-control" name="Password" id="Password">
+            </div>
+            <div class="form-group">
+                <label for="Confirm_Password" class="form-label">Confirm Password</label>
+                <input type="Password" class="form-control" name="Confirm_Password" id="Confirm_Password">
+            </div>
+            <div class="form-group">
+                <label for="Address" class="form-label">Address</label>
+                <textarea name="Address" class="form-control"  id="Address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="Fileupload" class="form-label">File Upload</label>
+                <input type="file" class="form-control" name="file" value="upload" multiple>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+    </div>
+</body>
+</html>

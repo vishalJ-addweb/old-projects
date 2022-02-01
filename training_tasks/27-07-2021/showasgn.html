@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>
+		Show content
+	</title>
+</head>
+<body>
+
+	<form id="form1" >
+		
+	<Label>Here you will find all assignments</label><br><br>
+		<input type="button" value="assignment1" onclick="btn1()"> <br><br>
+
+		<input type="button" value="assignment2" onclick="btn2()"><br><br>
+		<input type="button" value="assignment3" onclick="btn3()"><br>
+
+	</form>
+ <div id="demo"></div>
+	<script>
+
+	   /*function btn()
+	   
+	   	
+	   	{
+	   		window.open("asgn1.html","_self");
+	   	}*/
+	   	function btn1() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "asgn1.html", true);
+  xhttp.send();
+}
+	 
+	 	function btn2() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "asgn2.html", true);
+  xhttp.send();
+} 
+
+	function btn3() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "asgn3.html", true);
+  xhttp.send();
+} 
+</script>
+
+</body>
+</html>

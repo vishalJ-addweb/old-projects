@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    style 
+        include ../static/style.css
+</head>
+<body>
+    <div class="form-container">
+        <form action="/" name="form" method="post" class="contact-form" onsubmit="alert('Mail Sent');">
+            <h1>Send Email</h1>
+            <input type="email" name="email" id="email" placeholder="Enter Email ID"><br>
+            <input type="text" name="subject" id="subject" placeholder="Subject"><br>
+            <textarea id="message" name="message" placeholder="Type Message here ..." cols="30" rows="10"></textarea><br>
+            <input type="submit" class="submit" value="Send Message">
+        </form>
+    </div>
+
+</body>
+</html>

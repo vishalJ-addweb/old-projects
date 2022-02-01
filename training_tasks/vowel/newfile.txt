@@ -1,0 +1,3 @@
+hll ths s txt fl . Nd.js s n pn-src, crss-pltfrm, bck-nd JvScrpt rntm nvrnmnt tht rns n th V8 ngn nd xcts JvScrpt cd tsd  wb brwsr. 
+Thgh .js s th stndrd flnm xtnsn fr JvScrpt cd, th nm "Nd.js" dsn't rfr t  prtclr fl n ths cntxt nd s mrly th nm f th prdct. Nd.js hs n vnt-drvn rchtctr cpbl f synchrns I/O. Ths dsgn chcs m t ptmz thrghpt nd sclblty n wb pplctns wth mny npt/tpt prtns, s wll s fr rl-tm Wb pplctns (.g., rl-tm cmmnctn prgrms nd brwsr gms).
+THIS IS UPPER CASE CHARACTERS.THIS IS A TEXT FILE.

@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "data fetch by json server",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch db.json --port 3005"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
